@@ -1,0 +1,11 @@
+package com.udacity.jdnd.course3.critter.schedule;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(code = HttpStatus.NOT_FOUND, reason = "Schedule can not found")
+public class ScheduleNotFoundException extends RuntimeException {
+    public ScheduleNotFoundException(String message) {
+        super(message);
+    }
+}
